@@ -54,10 +54,119 @@ export default function Sidebar() {
           </li>
         </ul>
         <button className="sidebarButton">Show More</button>
-        <div className="sidebarHr"></div>
+        <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
           <li className="sidebarFriend">
-            <img src="" alt="friend profile pic" className="sidebarFriendImg" />
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
+          </li>
+          <li className="sidebarFriend">
+            <img
+              src="/assests/person.jpg"
+              alt="friend profile pic"
+              className="sidebarFriendImg"
+            />
+            <span className="sidebarFriendName">Jane Doe</span>
           </li>
         </ul>
       </div>
