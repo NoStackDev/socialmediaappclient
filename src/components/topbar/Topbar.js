@@ -36,7 +36,7 @@ export default function Topbar() {
           </div>
         </div>
         <img
-          src="/assests/person.jpg"
+          src="/assets/person.jpg"
           alt="profile pic"
           className="topbarImage"
         />

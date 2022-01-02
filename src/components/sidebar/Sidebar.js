@@ -58,7 +58,7 @@ export default function Sidebar() {
         <ul className="sidebarFriendList">
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
@@ -66,7 +66,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
@@ -74,7 +74,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
@@ -82,7 +82,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
@@ -90,7 +90,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
@@ -98,7 +98,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
@@ -106,7 +106,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
@@ -114,7 +114,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
@@ -122,7 +122,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
@@ -130,7 +130,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
@@ -138,7 +138,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
@@ -146,7 +146,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
@@ -154,7 +154,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
@@ -162,7 +162,7 @@ export default function Sidebar() {
           </li>
           <li className="sidebarFriend">
             <img
-              src="/assests/person.jpg"
+              src="/assets/person.jpg"
               alt="friend profile pic"
               className="sidebarFriendImg"
             />
