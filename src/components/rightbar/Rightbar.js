@@ -15,7 +15,7 @@ export default function Rightbar({ profile }) {
             <em>Person Test</em> and <em>3 others</em> have a birthday today
           </span>
         </div>
-        <img src="/assets/post.jpg" alt="" className="rightbarAd" />
+        <img src="post.jpg" alt="" className="rightbarAd" />
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
           <Online />
@@ -45,35 +45,19 @@ export default function Rightbar({ profile }) {
         <h4 className="rightbarTitle">User Friends</h4>
         <div className="rightbarFollowings">
           <div className="rightbarFollowing">
-            <img
-              src="assets/person.jpg"
-              alt=""
-              className="rightbarFollowingImg"
-            />
+            <img src="person.jpg" alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">John Carter</span>
           </div>
           <div className="rightbarFollowing">
-            <img
-              src="assets/person.jpg"
-              alt=""
-              className="rightbarFollowingImg"
-            />
+            <img src="person.jpg" alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">John Carter</span>
           </div>
           <div className="rightbarFollowing">
-            <img
-              src="assets/person.jpg"
-              alt=""
-              className="rightbarFollowingImg"
-            />
+            <img src="person.jpg" alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">John Carter</span>
           </div>
           <div className="rightbarFollowing">
-            <img
-              src="assets/person.jpg"
-              alt=""
-              className="rightbarFollowingImg"
-            />
+            <img src="person.jpg" alt="" className="rightbarFollowingImg" />
             <span className="rightbarFollowingName">John Carter</span>
           </div>
         </div>

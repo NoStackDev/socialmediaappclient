@@ -4,7 +4,7 @@ export default function Friend() {
   return (
     <li className="sidebarFriend">
       <img
-        src="/assets/person.jpg"
+        src="person.jpg"
         alt="friend profile pic"
         className="sidebarFriendImg"
       />
