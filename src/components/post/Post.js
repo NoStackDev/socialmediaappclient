@@ -4,9 +4,10 @@ import RecommendIcon from "@mui/icons-material/Recommend";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./post.css";
+import * as timeago from "timeago.js";
 
-export default function Post(post) {
-  const userId = post.post.userId;
+export default function Post({ post }) {
+  const userId = post.userId;
 
   const [profilePic, setProfilePic] = useState("");
   const [userName, setUsername] = useState("");
@@ -29,21 +30,21 @@ export default function Post(post) {
           <div className="postTopLeft">
             <img src={profilePic} alt="profile" className="postProfileImg" />
             <span className="postUsername">{userName}</span>
-            <span className="postDate">5 mins ago</span>
+            <span className="postDate">{timeago.format(post.createdAt)}</span>
           </div>
           <div className="postTopRight">
             <MoreVertIcon />
           </div>
         </div>
         <div className="postCenter">
-          <span className="postText"> {post.post.comment} </span>
+          <span className="postText"> {post.comment} </span>
           <img className="postImg" src="/post.jpg" alt="" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
             <RecommendIcon className="likeIcon" />
             <FavoriteIcon className="likeIcon" />
-            <span className="postLikeCounter">{post.post.likes}</span>
+            <span className="postLikeCounter">{post.likedBy.length}</span>
           </div>
           <div className="postBottomRight">
             <span className="postCommentText">9 comments</span>

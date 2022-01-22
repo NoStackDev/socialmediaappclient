@@ -12,7 +12,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        <Route path="/profile/:username" component={Profile} />
+        <Route path="/profile/:id" component={Profile} />
       </Switch>
     </Router>
   );
