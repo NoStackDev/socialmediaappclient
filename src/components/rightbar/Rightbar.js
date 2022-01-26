@@ -1,8 +1,11 @@
 import CelebrationIcon from "@mui/icons-material/Celebration";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 import Online from "../online/Online";
 import "./rightbar.css";
 
 export default function Rightbar({ profile }) {
+  const { user } = useContext(AuthContext);
   const HomeRightbar = () => {
     return (
       <>
@@ -31,35 +34,30 @@ export default function Rightbar({ profile }) {
         <div className="rightbarInfo">
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">City:</span>
-            <span className="rightbarInfoValue">New York</span>
+            <span className="rightbarInfoValue">{user.city}</span>
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">From:</span>
-            <span className="rightbarInfoValue">Madrid</span>
+            <span className="rightbarInfoValue">{user.country}</span>
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">Relationship:</span>
-            <span className="rightbarInfoValue">Single</span>
+            <span className="rightbarInfoValue">
+              {user.relationship ? "Married" : "Single"}
+            </span>
           </div>
         </div>
         <h4 className="rightbarTitle">User Friends</h4>
         <div className="rightbarFollowings">
-          <div className="rightbarFollowing">
-            <img src="person.jpg" alt="" className="rightbarFollowingImg" />
-            <span className="rightbarFollowingName">John Carter</span>
-          </div>
-          <div className="rightbarFollowing">
-            <img src="person.jpg" alt="" className="rightbarFollowingImg" />
-            <span className="rightbarFollowingName">John Carter</span>
-          </div>
-          <div className="rightbarFollowing">
-            <img src="person.jpg" alt="" className="rightbarFollowingImg" />
-            <span className="rightbarFollowingName">John Carter</span>
-          </div>
-          <div className="rightbarFollowing">
-            <img src="person.jpg" alt="" className="rightbarFollowingImg" />
-            <span className="rightbarFollowingName">John Carter</span>
-          </div>
+          {user.following.map((follows, indx) => {
+            console.log(follows);
+            return (
+              <div className="rightbarFollowing" key={indx}>
+                <img src="person.jpg" alt="" className="rightbarFollowingImg" />
+                <span className="rightbarFollowingName">John Carter</span>
+              </div>
+            );
+          })}
         </div>
       </>
     );
@@ -68,7 +66,7 @@ export default function Rightbar({ profile }) {
   return (
     <div className="rightbar">
       <div className="rightbarWrapper">
-        <ProfileRightbar />
+        {profile ? <ProfileRightbar /> : <HomeRightbar />}
       </div>
     </div>
   );

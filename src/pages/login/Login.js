@@ -1,29 +1,27 @@
 import "./login.css";
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 import axios from "axios";
+import { loginCall } from "../../apiCalls";
+import { AuthContext } from "../../context/AuthContext";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export default function Login() {
   const emailElement = useRef();
   const passwordElement = useRef();
 
+  const { user, isFetching, error, dispatch } = useContext(AuthContext);
+
   axios.defaults.withCredentials = true;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const submitData = async () => {
-      try {
-        const res = await axios.post("/login", {
-          email: emailElement.current.value,
-          password: passwordElement.current.value,
-        });
-        console.log(res.ok);
-        console.log(res.data.message);
-      } catch (err) {
-        // console.log(err.response.data);
-      }
-    };
-    submitData();
+    loginCall(
+      {
+        email: emailElement.current.value,
+        password: passwordElement.current.value,
+      },
+      dispatch
+    );
   };
 
   return (
@@ -54,8 +52,8 @@ export default function Login() {
               className="loginInput"
               ref={passwordElement}
             />
-            <button type="submit" className="loginButton">
-              Log In
+            <button type="submit" className="loginButton" disabled={isFetching}>
+              {isFetching ? <CircularProgress /> : "Log In"}
             </button>
             <span className="loginForgot">Forgot Password?</span>
             <button className="loginRegisterButton">
