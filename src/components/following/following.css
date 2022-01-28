@@ -1,6 +1,7 @@
 .rightbarFollowing {
   display: flex;
   flex-direction: column;
+  margin: 1.2px;
   margin-bottom: 20px;
 }
 
@@ -13,4 +14,5 @@
 
 .rightbarFollowingName {
   width: 100px;
+  text-align: center;
 }
