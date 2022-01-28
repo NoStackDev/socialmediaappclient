@@ -22,7 +22,7 @@ export default function Post({ post }) {
       }
     };
     getProfilePic(userId);
-  }, []);
+  }, [userId]);
   return (
     <div className="post">
       <div className="postWrapper">

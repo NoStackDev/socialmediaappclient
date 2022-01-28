@@ -1,8 +1,7 @@
 import CelebrationIcon from "@mui/icons-material/Celebration";
-import { useState } from "react";
-import { useEffect } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import Following from "../following/Following";
 import Online from "../online/Online";
 import "./rightbar.css";
 
@@ -51,14 +50,8 @@ export default function Rightbar({ profile }) {
         </div>
         <h4 className="rightbarTitle">User Friends</h4>
         <div className="rightbarFollowings">
-          {user.following.map((follows, indx) => {
-            console.log(follows);
-            return (
-              <div className="rightbarFollowing" key={indx}>
-                <img src="" alt="" className="rightbarFollowingImg" />
-                <span className="rightbarFollowingName"></span>
-              </div>
-            );
+          {user.following.map((userId, indx) => {
+            return <Following userId={userId} key={indx} />;
           })}
         </div>
       </>
