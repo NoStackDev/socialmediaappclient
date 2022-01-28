@@ -1,4 +1,6 @@
 import CelebrationIcon from "@mui/icons-material/Celebration";
+import { useState } from "react";
+import { useEffect } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import Online from "../online/Online";
@@ -53,8 +55,8 @@ export default function Rightbar({ profile }) {
             console.log(follows);
             return (
               <div className="rightbarFollowing" key={indx}>
-                <img src="person.jpg" alt="" className="rightbarFollowingImg" />
-                <span className="rightbarFollowingName">John Carter</span>
+                <img src="" alt="" className="rightbarFollowingImg" />
+                <span className="rightbarFollowingName"></span>
               </div>
             );
           })}

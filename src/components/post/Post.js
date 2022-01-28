@@ -22,7 +22,7 @@ export default function Post({ post }) {
       }
     };
     getProfilePic(userId);
-  });
+  }, []);
   return (
     <div className="post">
       <div className="postWrapper">
@@ -38,7 +38,7 @@ export default function Post({ post }) {
         </div>
         <div className="postCenter">
           <span className="postText"> {post.comment} </span>
-          <img className="postImg" src="/post.jpg" alt="" />
+          <img className="postImg" src={post.img} alt="" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">

@@ -8,7 +8,6 @@ import { AuthContext } from "../../context/AuthContext";
 export default function Feed() {
   const { user } = useContext(AuthContext);
   const [posts, setPosts] = useState([]);
-  console.log(posts.length);
 
   useEffect(() => {
     const getTimeLinePosts = async () => {
@@ -16,7 +15,7 @@ export default function Feed() {
       setPosts(res.data.data);
     };
     getTimeLinePosts();
-  }, [setPosts, user._id]);
+  }, [user._id]);
   return (
     <div className="feed">
       <div className="feedWrapper">

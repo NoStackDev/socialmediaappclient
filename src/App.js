@@ -21,11 +21,9 @@ function App() {
         </Route>
         <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
         <Route path="/register">
-          <Register />
+          {user ? <Redirect to="/" /> : <Register />}
         </Route>
-        <Route path="/profile/:id">
-          <Profile />
-        </Route>
+        <Route path="/profile/:id">{user ? <Profile /> : <Login />}</Route>
       </Switch>
     </Router>
   );
