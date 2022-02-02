@@ -10,7 +10,8 @@ export default function Login() {
   const emailElement = useRef();
   const passwordElement = useRef();
 
-  const { user, isFetching, error, dispatch } = useContext(AuthContext);
+  const { user, isFetching, registered, error, dispatch } =
+    useContext(AuthContext);
 
   axios.defaults.withCredentials = true;
 

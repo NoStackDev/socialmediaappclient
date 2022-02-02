@@ -1,6 +1,28 @@
+import { useContext, useRef } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 import "./register.css";
+import { CircularProgress } from "@mui/material";
+import { registerCall } from "../../apiCalls";
 
 export default function Register() {
+  const { isFetching, dispatch } = useContext(AuthContext);
+  const usernameElement = useRef();
+  const emailElement = useRef();
+  const passwordElement = useRef();
+  const passwordConfirmElement = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    registerCall(
+      {
+        email: emailElement.current.value,
+        password: passwordElement.current.value,
+      },
+      dispatch
+    );
+  };
+
   return (
     <div className="register">
       <div className="registerWrapper">
@@ -11,28 +33,44 @@ export default function Register() {
           </span>
         </div>
         <div className="registerRight">
-          <div className="registerBox">
+          <form className="registerBox" onSubmit={(e) => handleSubmit(e)}>
             <input
               type="text"
               placeholder="username"
               className="registerInput"
+              ref={usernameElement}
             />
-            <input type="email" placeholder="email" className="registerInput" />
+            <input
+              type="email"
+              placeholder="email"
+              className="registerInput"
+              ref={emailElement}
+            />
             <input
               type="password"
               placeholder="password"
               className="registerInput"
+              ref={passwordElement}
             />
             <input
               type="password"
               placeholder="confirm password"
               className="registerInput"
+              ref={passwordConfirmElement}
             />
-            <button className="registerButton">Sign Up</button>
-            <button className="registerRegisterButton">
-              Log in to account
+            <button
+              type="submit"
+              className="registerButton"
+              disabled={isFetching}
+            >
+              {isFetching ? <CircularProgress /> : "Sign Up"}
             </button>
-          </div>
+            <Link to="/login">
+              <button className="registerRegisterButton">
+                Log in to account
+              </button>
+            </Link>
+          </form>
         </div>
       </div>
     </div>

@@ -112,6 +112,7 @@ const INITIAL_STATE = {
   //   __v: 81,
   // },
   isFetching: false,
+  registered: false,
   error: null,
 };
 

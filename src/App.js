@@ -12,7 +12,7 @@ import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 
 function App() {
-  const { user } = useContext(AuthContext);
+  const { user, registered } = useContext(AuthContext);
   return (
     <Router>
       <Switch>
@@ -21,7 +21,7 @@ function App() {
         </Route>
         <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
         <Route path="/register">
-          {user ? <Redirect to="/" /> : <Register />}
+          {user || registered ? <Redirect to="/" /> : <Register />}
         </Route>
         <Route path="/profile/:id">{user ? <Profile /> : <Login />}</Route>
       </Switch>

@@ -71,7 +71,7 @@
 }
 
 .registerRegisterButton {
-  width: 60%;
+  width: 100%;
   align-self: center;
   height: 50px;
   border-radius: 10px;
@@ -81,4 +81,9 @@
   font-style: 20px;
   font-weight: 500;
   cursor: pointer;
+}
+
+a {
+  width: 60%;
+  align-self: center;
 }
