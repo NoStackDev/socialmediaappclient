@@ -1,10 +1,25 @@
 import "./share.css";
 import { PermMedia, Label, Room, EmojiEmotions } from "@mui/icons-material";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import { createPostCall } from "../../apiCalls";
+import { PostContext } from "../../context/PostContext";
 
 export default function Share() {
+  const shareInputElement = useRef();
   const { user } = useContext(AuthContext);
+  const { isSuccess, isSharing, commentDispatch } = useContext(PostContext);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(shareInputElement.current.value);
+    createPostCall(
+      { userId: user._id, comment: shareInputElement.current.value },
+      commentDispatch
+    );
+    shareInputElement.current.value = "";
+  };
+
   return (
     <div className="share">
       <div className="shareWrapper">
@@ -18,10 +33,11 @@ export default function Share() {
             type="text"
             placeholder="What's on your mind?"
             className="shareInput"
+            ref={shareInputElement}
           />
         </div>
         <hr className="shareHr" />
-        <div className="shareBottom">
+        <form className="shareBottom" onSubmit={(e) => handleSubmit(e)}>
           <div className="shareOptions">
             <div className="shareOption">
               <PermMedia htmlColor="tomato" className="shareIcon" />
@@ -40,8 +56,10 @@ export default function Share() {
               <span className="shareOptionText">Feelings</span>
             </div>
           </div>
-          <button className="shareButton">Share </button>
-        </div>
+          <button className="shareButton" type="submit">
+            Share{" "}
+          </button>
+        </form>
       </div>
     </div>
   );

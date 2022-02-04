@@ -28,8 +28,8 @@ export default function Profile() {
             </div>
           </div>
           <div className="profileRightBottom">
-            <Feed />
-            <Rightbar profile={true} />
+            <Feed isProfilePage={true} />
+            <Rightbar isProfilePage={true} />
           </div>
         </div>
       </div>

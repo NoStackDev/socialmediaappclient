@@ -4,9 +4,11 @@ import "./feed.css";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { AuthContext } from "../../context/AuthContext";
+import { PostContext, PostContextProvider } from "../../context/PostContext";
 
-export default function Feed() {
+const PostFeed = () => {
   const { user } = useContext(AuthContext);
+  const { isSuccess } = useContext(PostContext);
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -15,15 +17,26 @@ export default function Feed() {
       setPosts(res.data.data);
     };
     getTimeLinePosts();
-  }, [user._id]);
+  }, [user._id, isSuccess]);
+
   return (
-    <div className="feed">
-      <div className="feedWrapper">
-        <Share />
-        {posts.map((post) => {
-          return <Post key={post._id} post={post} />;
-        })}
-      </div>
+    <div>
+      {posts.map((post) => {
+        return <Post key={post._id} post={post} />;
+      })}
     </div>
+  );
+};
+
+export default function Feed({ isProfilePage }) {
+  return (
+    <PostContextProvider>
+      <div className="feed">
+        <div className="feedWrapper">
+          {isProfilePage ? <></> : <Share />}
+          <PostFeed />
+        </div>
+      </div>
+    </PostContextProvider>
   );
 }

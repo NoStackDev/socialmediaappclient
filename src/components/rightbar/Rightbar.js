@@ -5,7 +5,7 @@ import Following from "../following/Following";
 import Online from "../online/Online";
 import "./rightbar.css";
 
-export default function Rightbar({ profile }) {
+export default function Rightbar({ isProfilePage }) {
   const { user } = useContext(AuthContext);
   const HomeRightbar = () => {
     return (
@@ -61,7 +61,7 @@ export default function Rightbar({ profile }) {
   return (
     <div className="rightbar">
       <div className="rightbarWrapper">
-        {profile ? <ProfileRightbar /> : <HomeRightbar />}
+        {isProfilePage ? <ProfileRightbar /> : <HomeRightbar />}
       </div>
     </div>
   );
